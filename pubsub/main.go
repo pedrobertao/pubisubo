@@ -42,7 +42,7 @@ func (p *PubSub[T]) Publish(topic string, msg T) {
 }
 
 func Start[T GenericValues]() *PubSub[T] {
-	fmt.Println("*=*Starting PubSub*=*")
+	fmt.Println("*=Starting PubSub=*")
 	pg := &PubSub[T]{
 		subs: make(map[string][]chan T),
 		mu:   sync.Mutex{},
